@@ -1,6 +1,0 @@
-@DesignPatternsProject_HostAddress = http://localhost:5009
-
-GET {{DesignPatternsProject_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

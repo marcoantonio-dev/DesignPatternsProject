@@ -1,0 +1,6 @@
+@DesignPatternsProject = http://localhost:5129
+
+GET {{DesignPatternsProject}}/weatherforecast/
+Accept: application/json
+
+###
