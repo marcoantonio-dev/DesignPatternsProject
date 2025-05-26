@@ -13,21 +13,21 @@ Diagramas UML
 
 🔧 Funcionalidades Principais
 
-    🎯 Gestão de Pedidos
-    Os pedidos percorrem um fluxo de status: Aguardando Pagamento, Pago, Enviado e Cancelado.
+🎯 Gestão de Pedidos
+Os pedidos percorrem um fluxo de status: Aguardando Pagamento, Pago, Enviado e Cancelado.
 
-    🚚 Tipos de Frete
-    Oferece envio via:
+🚚 Tipos de Frete
+Oferece envio via:
 
-        Transporte terrestre (5% do valor do pedido)
+    Transporte terrestre (5% do valor do pedido)
 
-        Transporte aéreo (10% do valor do pedido)
+    Transporte aéreo (10% do valor do pedido)
 
-    🔒 Restrições de Estado
-    Uma vez cancelado, o pedido torna-se imutável — não pode ser alterado nem avançar de status.
+🔒 Restrições de Estado
+Uma vez cancelado, o pedido torna-se imutável — não pode ser alterado nem avançar de status.
 
-    🔁 Extensibilidade
-    A estrutura foi projetada para permitir inclusão de novos métodos de frete ou status sem afetar o funcionamento atual do sistema.
+🔁 Extensibilidade
+A estrutura foi projetada para permitir inclusão de novos métodos de frete ou status sem afetar o funcionamento atual do sistema.
 
 🧠 Padrões de Projeto Utilizados
 🌀 State Pattern
@@ -46,13 +46,13 @@ Responsável pelo acesso aos dados e comunicação com o banco. Essa camada isol
 
 Contém a regra de negócio, incluindo:
 
-    Gerenciamento de pedidos
+   G erenciamento de pedidos
 
-    Cálculo de frete
+   Cálculo de frete
 
-    Transição entre estados
+   Transição entre estados
 
-    Conversões entre Model e DTO
+   Conversões entre Model e DTO
 
 Aqui também é onde os padrões State e Strategy são aplicados.
 🌐 Controller
@@ -60,13 +60,13 @@ Aqui também é onde os padrões State e Strategy são aplicados.
 A interface entre o cliente e o sistema. Os controladores expõem os endpoints, validam as requisições e delegam o processamento para os serviços.
 🧪 Exemplos de Fluxo
 
-    Criar pedido: inicia com estado Aguardando Pagamento.
+   Criar pedido: inicia com estado Aguardando Pagamento.
 
-    Pagar pedido: transita para Pago.
+   Pagar pedido: transita para Pago.
 
-    Enviar pedido: transita para Enviado.
+   Enviar pedido: transita para Enviado.
 
-    Cancelar pedido: transita para Cancelado (sem retorno).
+   Cancelar pedido: transita para Cancelado (sem retorno).
 
 💡 Considerações Finais
 
